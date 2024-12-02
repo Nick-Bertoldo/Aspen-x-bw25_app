@@ -23,8 +23,8 @@ import matrix_utils as mu
 import bw_processing as bp
 
 # bw project setup
-bd.projects.set_current("<name of your project with ecoinvent>")
-ei_db = bd.Database("<ecoinvent database name>")
+bd.projects.set_current("<name of your project with ecoinvent>") # insert the name of your project
+ei_db = bd.Database("<ecoinvent database name>") 
 bio_db = bd.Database("<biosphere database name>")
 # impact assessment method used for the computation of LCA impacts
 EF_select = [met for met in bd.methods if met[0] == 'EF v3.1']
@@ -297,7 +297,7 @@ app.layout = dbc.Container(
 )
 
     
-
+# Upload materials export from Aspen
 @callback(
     Output('material-data-upload', 'children'),
     Output('input-flows-store', 'data'),
@@ -434,7 +434,7 @@ def materials_upload(content, filename, date):
         print(e)
         return html.Div(['There was an error processing this file. Upload only .xlsx file']), None, None, {'display': 'None'}
 
-
+# Load input element in the layout
 @callback(Output({'type':'input-element', 'index':MATCH}, 'children'),
               Input({'type': 'flow-type-input', 'index': MATCH}, 'value'),
               prevent_initial_call=True) 
@@ -506,7 +506,7 @@ def input_element(type):
     else: 
         return []
 
-
+# search ecoinvent datasets and display the options 
 @callback(Output({'type': 'ecoinvent-input', 'index':MATCH}, 'options'),
           Input({'type': 'search-ecoinvent', 'index':MATCH}, 'value'),
           prevent_initial_call=True
@@ -520,6 +520,7 @@ def search_ecoinvent_activity(name):
         options = [{'label': f"{item['name']}, {item['location']}", 'value': item[1]} for item in flow_list]
         return options
     
+# search elementary flow and display the options 
 @callback(Output({'type': 'bio-input', 'index':MATCH}, 'options'),
           Input({'type': 'search-bio', 'index':MATCH}, 'value'),
           prevent_initial_call=True
@@ -533,6 +534,7 @@ def search_biosphere(name):
         options = [{'label': f"{item['name']}, {item['categories']}", 'value': item[1]} for item in flow_list]
         return options
 
+# display reference product of the selected activity
 @callback(Output({'type': 'ecoinvent-input-name', 'index': MATCH}, 'children'),
           Input({'type': 'ecoinvent-input', 'index':MATCH}, 'value'),
           prevent_initial_call=True
@@ -545,6 +547,7 @@ def print_ei_name(ei_act):
         ref_product = bd.get_node(code = ei_act)['reference product']
         return f"Reference product: {ref_product}"
 
+# load output element in the layout
 @callback(Output({'type':'output-element', 'index':MATCH}, 'children'),
               Input({'type': 'output-type', 'index': MATCH}, 'value'),
               prevent_initial_call=True) 
@@ -622,7 +625,7 @@ def output_element(type):
         ]
         return children
 
-
+# display an alert if no reference flow is selected
 @callback(Output('output-type-error', 'children'),
               Input({'type': 'output-type', 'index': ALL}, 'value'),
               prevent_initial_call=True) 
@@ -634,6 +637,7 @@ def ref_alert(types):
         children = [dbc.Alert("One of the output must be the reference flow", color="danger"),]
         return children
 
+# search waste activity
 @callback(Output({'type': 'ecoinvent-waste', 'index':MATCH}, 'options'),
           Input({'type': 'waste', 'index':MATCH}, 'value'),
           prevent_initial_call=True
@@ -647,7 +651,7 @@ def search_waste_activity(waste):
         options = [{'label': f"{item['name']}, {item['location']}", 'value': item[1]} for item in ei_waste_list]
         return options
     
-
+# display waste ref. product
 @callback(Output({'type': 'waste-name', 'index': MATCH}, 'children'),
           Input({'type': 'ecoinvent-waste', 'index':MATCH}, 'value'),
           prevent_initial_call=True
@@ -661,7 +665,7 @@ def print_waste_name(waste_act):
         ref_product = bd.get_node(code = waste_act)['reference product']
         return f"Reference product: {ref_product}"
 
-
+# search emission
 @callback(Output({'type': 'emission', 'index':MATCH}, 'options'),
           Input({'type': 'bio', 'index':MATCH}, 'value'),
           prevent_initial_call=True
@@ -675,7 +679,7 @@ def search_emission(bio):
         options = [{'label': f"{item['name']}, {item['categories']}", 'value': item[1]} for item in emission_list]
         return options
 
-
+# Utility element
 @callback(Output('utility-data-upload', 'children'),
           Output('utilities-store', 'data'),
           Output('toggle-category', 'style', allow_duplicate=True),
@@ -781,6 +785,7 @@ def utility_upload(content, filename, date):
             'There was an error processing this file. Upload only .xlsx file'
         ]), None, {'display': 'None'}
     
+# search utility in ecoinvent
 @callback(Output({'type': 'ecoinvent-utility', 'index':MATCH}, 'options'),
           Input({'type': 'search-utility', 'index':MATCH}, 'value'),
           prevent_initial_call=True
@@ -794,7 +799,7 @@ def search_ecoinvent_utility(name):
         options = [{'label': f"{item['name']}, {item['location']}", 'value': item[1]} for item in ei_activity_list]
         return options
     
-
+# display utility ref. product
 @callback(Output({'type': 'utility-ecoinvent-name', 'index': MATCH}, 'children'),
           Input({'type': 'ecoinvent-utility', 'index':MATCH}, 'value'),
           prevent_initial_call=True
@@ -807,7 +812,7 @@ def print_util_ei_name(util_act):
         ref_product = bd.get_node(code = util_act)['reference product']
         return f"Reference product: {ref_product}"
 
-
+# Dataframe setup for LCA calculation
 @callback(
     Output('lca-setup', 'data'),
     Output('graph', 'style'),
@@ -886,6 +891,7 @@ def lca_calc(act_in, bio_in, in_type, out_type, act_waste, emission, act_util, i
 
             act_df = pd.concat([in_df, out_df])
             act_df.loc[act_df['Type']=='Reference flow', 'Activity']=act_df.loc[act_df['Type']=='Reference flow', 'Stream Name']
+            # ref_act = create_ref_act(act_df)
 
             act_dff = act_df[~act_df['Type'].str.contains('Biosphere', na=False)]
             
@@ -895,6 +901,7 @@ def lca_calc(act_in, bio_in, in_type, out_type, act_waste, emission, act_util, i
 
             return LCA_setting_df.to_dict("records"), style
 
+# LCA calculation and visualization of results
 @callback(
     Output('graph', 'figure'),
     Output('tot-impact', 'children'),
@@ -974,4 +981,6 @@ def func(n_clicks, lca_data):
 
 if __name__ == "__main__":
     app.run(debug=False, dev_tools_hot_reload=False, )
+
+
 
