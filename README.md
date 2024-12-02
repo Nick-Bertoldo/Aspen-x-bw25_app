@@ -15,10 +15,10 @@ The presented framework stands as a scalable and adaptable solution, aiming to f
 
 Before you begin, ensure you have met the following requirements:
 
-- Aspen plus
-- ecoinvent licence
+- Aspen plus software;
+- ecoinvent licence;
 - brightway 2.5: To install bw you can follow the instructions present in this repository:  https://github.com/brightway-lca/brightway25
-
+- A brightway project with ecoinvent (https://docs.brightway.dev/en/latest/content/cheatsheet/importing.html). 
 
 ## 🔧 Installation
 
@@ -27,5 +27,16 @@ Before you begin, ensure you have met the following requirements:
 ```bash
 git clone https://github.com/[your-username]/[repository-name].git
 cd [repository-name]
+```
 
+
+
+## ✨ Potential improvements
+
+
+
+## 📞 Contact
+If you have any questions or need help, do not hesitate to contact me:
+Nicolas Bertoldo - nicolas.bertoldo@polimi.it
+Project Link: https://github.com/Nick-Bertoldo/Aspen-x-bw25_app
 
