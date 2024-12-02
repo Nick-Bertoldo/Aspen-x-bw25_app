@@ -31,7 +31,7 @@ cd [repository-name]
 
 
 
-## ✨ Potential improvements
+## ✨ Known issues and potential improvements
 
 
 
