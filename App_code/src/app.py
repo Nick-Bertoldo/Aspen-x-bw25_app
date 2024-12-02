@@ -23,9 +23,10 @@ import matrix_utils as mu
 import bw_processing as bp
 
 # bw project setup
-bd.projects.set_current("Ecoinvent-3.10-cut-off")
-ei_db = bd.Database("ecoinvent-3.10-cutoff")
-bio_db = bd.Database("ecoinvent-3.10-biosphere")
+bd.projects.set_current("<name of your project with ecoinvent>")
+ei_db = bd.Database("<ecoinvent database name>")
+bio_db = bd.Database("<biosphere database name>")
+# impact assessment method used for the computation of LCA impacts
 EF_select = [met for met in bd.methods if met[0] == 'EF v3.1']
 
 def get_sheet_data(sheets, sheet_name):
@@ -35,13 +36,15 @@ def get_sheet_data(sheets, sheet_name):
         print(f'{sheet_name} sheet is missing!')
         return pd.DataFrame()
 
+# list of conversion factors from Aspen to brightway
 conversion_factors = {
     'kg/hr': 1,  # Assuming kg/hr stays as kg/hr, no conversion needed
     'l/min': 0.001 * 60 , # Convert l/min to cubic meters per hour (m³/hr)
-    'tonne/year': 1000/(365*24),
+    'tonne/year': 1000/(365*24), # Convert tonne/year to kg per hour (kg/hr)
     'MJ/hr' : 1
 }
 
+# calculate the flow amounts, considering the correct units, for setting up the LCA computation
 def calculate_amount(row, ref_mass_flow):
     if row['Act unit'] == 'kilogram':
         return row['Mass Flows'] / ref_mass_flow
@@ -54,30 +57,6 @@ def calculate_amount(row, ref_mass_flow):
     else:
         return 0.0
     
-def create_ref_act(df):
-    ref = df.loc[df['Type']=='Reference flow', 'Stream Name'].iloc[0]
-    try:
-        ref_act = ei_db.new_node(code=ref,name=ref, location="Aspen_bw", type='process', unit="kilogram")
-    except:
-        ref_act = bd.get_node(code = ref)
-        ref_act.delete()
-        ref_act = ei_db.new_node(code=ref,name=ref, location="Aspen_bw", type='process', unit="kilogram")
-    
-    for i in range(len(df[df['Type'].str.contains('Biosphere', na=False)]['Activity'])):
-        code_exc = df[df['Type'].str.contains('Biosphere', na=False)]['Activity'].iloc[i]
-        unit_exc = df[df['Type'].str.contains('Biosphere', na=False)]['Act unit'].iloc[i]
-        amount_exc = df[df['Type'].str.contains('Biosphere', na=False)]['Amount'].iloc[i]
-
-        act = bd.get_node(code= code_exc)
-        ref_act.new_edge(input=act.key, 
-                            amount=amount_exc,
-                            unit=unit_exc, 
-                            type='biosphere').save()
-        ref_act.save()
-    
-    
-    return ref_act
-
 app = Dash(__name__, external_stylesheets=[dbc.themes.MINTY, dbc.icons.FONT_AWESOME])
 server = app.server
 
@@ -907,7 +886,6 @@ def lca_calc(act_in, bio_in, in_type, out_type, act_waste, emission, act_util, i
 
             act_df = pd.concat([in_df, out_df])
             act_df.loc[act_df['Type']=='Reference flow', 'Activity']=act_df.loc[act_df['Type']=='Reference flow', 'Stream Name']
-            ref_act = create_ref_act(act_df)
 
             act_dff = act_df[~act_df['Type'].str.contains('Biosphere', na=False)]
             
