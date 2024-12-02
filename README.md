@@ -26,7 +26,7 @@ Before you begin, ensure you have met the following requirements:
 
 ```bash
 git clone https://github.com/Nick-Bertoldo/Aspen-x-bw25_app.git
-cd [repository-name]
+cd Aspen-x-bw25_app
 ```
 
 
