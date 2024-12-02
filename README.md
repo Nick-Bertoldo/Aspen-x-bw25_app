@@ -1,6 +1,7 @@
 # Integrating Aspen Plus Simulations with Brightway 2.5 for Sustainable Process Design
 
-![image](https://github.com/user-attachments/assets/86ab91e4-7ceb-4748-9480-b0b208b8583a)
+![image](https://github.com/user-attachments/assets/2d536f74-7efa-4597-974e-9781b63c8143)
+
 
 This project was presented at the 2024 Life Cycle Innovation Conference (LCIC) in Berlin, Germany.
 
