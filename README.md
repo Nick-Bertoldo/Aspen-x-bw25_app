@@ -25,7 +25,7 @@ Before you begin, ensure you have met the following requirements:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/[your-username]/[repository-name].git
+git clone https://github.com/Nick-Bertoldo/Aspen-x-bw25_app.git
 cd [repository-name]
 ```
 
