@@ -29,7 +29,15 @@ git clone https://github.com/Nick-Bertoldo/Aspen-x-bw25_app.git
 cd Aspen-x-bw25_app
 ```
 
-
+### App setup:
+- Loading Brightway project with ecoinvent:
+```bash
+bd.projects.set_current("<name of your project with ecoinvent>") # insert the name of your project
+ei_db = bd.Database("<ecoinvent database name>") 
+bio_db = bd.Database("<biosphere database name>")
+# impact assessment method used for the computation of LCA impacts
+EF_select = [met for met in bd.methods if met[0] == 'EF v3.1']
+```
 
 ## ✨ Known issues and potential improvements
 
