@@ -18,19 +18,21 @@ The integration is facilitated through a user-friendly graphical user interface 
 The presented framework stands as a scalable and adaptable solution, aiming to foster sustainable practices by integrating seamlessly into the existing workflow, providing a valuable tool for decision-makers in the pursuit of environmentally conscious process design.
 
 ## 📋 Prerequisites
-
+```{admonition} ## 📋 Prerequisites
+:class: important
 Before you begin, ensure you have met the following requirements:
 
 - Aspen plus software;
 - ecoinvent licence;
 - brightway 2.5: To install bw you can follow the instructions present in this repository:  https://github.com/brightway-lca/brightway25
 - [A brightway project with ecoinvent](https://docs.brightway.dev/en/latest/content/cheatsheet/importing.html). 
+```
 
 ## 🔧 Installation
 
 ### Clone the Repository
 
-```python
+```console
 git clone https://github.com/Nick-Bertoldo/Aspen-x-bw25_app.git
 cd Aspen-x-bw25_app
 ```
