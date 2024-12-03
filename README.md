@@ -30,14 +30,15 @@ Before you begin, ensure you have met the following requirements:
 
 ### Clone the Repository
 
-```bash
+```python
 git clone https://github.com/Nick-Bertoldo/Aspen-x-bw25_app.git
 cd Aspen-x-bw25_app
 ```
 
 ### App setup:
 - Loading Brightway project with ecoinvent:
-```bash
+
+```python
 bd.projects.set_current("<name of your project with ecoinvent>") # insert the name of your project
 ei_db = bd.Database("<ecoinvent database name>") 
 bio_db = bd.Database("<biosphere database name>")
