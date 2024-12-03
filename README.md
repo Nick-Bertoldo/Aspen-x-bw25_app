@@ -58,7 +58,7 @@ The example is related to the pyrolisis of waste tires to produce fuel oil, take
 - Improve the integration with Aspen, including a python interface directly in the app. (e.g. [AspenPythonInterface](https://github.com/YouMayCallMeJesus/AspenPlus-Python-Interface))
 
 
-## 📞 Contact
+## 💬 Contact
 If you have any questions or need help, do not hesitate to contact me:
 
 [Nicolas Bertoldo](https://github.com/Nick-Bertoldo) - nicolas.bertoldo@polimi.it
