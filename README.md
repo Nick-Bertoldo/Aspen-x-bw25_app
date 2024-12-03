@@ -9,7 +9,7 @@
 ![image](https://github.com/user-attachments/assets/2d536f74-7efa-4597-974e-9781b63c8143)
 
 
-This project was presented at [the 2024 Life Cycle Innovation Conference] (https://fslci.org/lcic/lcic2024/lcic2024-abstracts/integrating-aspen-plus-simulations-with-brightway-2-5-for-sustainable-process-design-a-case-study-on-hydrogen-production-from-mixed-plastic-waste/) (LCIC) in Berlin, Germany.
+This project was presented at [the 2024 Life Cycle Innovation Conference](https://fslci.org/lcic/lcic2024/lcic2024-abstracts/integrating-aspen-plus-simulations-with-brightway-2-5-for-sustainable-process-design-a-case-study-on-hydrogen-production-from-mixed-plastic-waste/) (LCIC) in Berlin, Germany.
 
 ## 📝 Description
 The process industry faces significant challenges in achieving sustainable development, often constrained by narrow profit margins and a conservative approach to innovation. The implementation of novel solutions to reduce environmental impact is not readily embraced in this industry. Additionally, the quantification of environmental impacts at the early stages of process design is hindered by a lack of primary data and comprehensive life cycle assessment (LCA) databases tailored to the specificities of the process industry. This research addresses this gap by introducing a novel framework that enables the quantification of environmental impacts during the initial design phase of a process.
@@ -24,7 +24,7 @@ Before you begin, ensure you have met the following requirements:
 - Aspen plus software;
 - ecoinvent licence;
 - brightway 2.5: To install bw you can follow the instructions present in this repository:  https://github.com/brightway-lca/brightway25
-- [A brightway project with ecoinvent] (https://docs.brightway.dev/en/latest/content/cheatsheet/importing.html). 
+- [A brightway project with ecoinvent](https://docs.brightway.dev/en/latest/content/cheatsheet/importing.html). 
 
 ## 🔧 Installation
 
