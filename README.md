@@ -1,4 +1,4 @@
-# AspenXbw: Integrating Aspen Plus Simulations with Brightway 2.5 for Sustainable Process Design
+# Aspen-x-bw: Integrating Aspen Plus Simulations with Brightway 2.5 for Sustainable Process Design
 
 ![image](https://github.com/user-attachments/assets/2d536f74-7efa-4597-974e-9781b63c8143)
 
@@ -6,7 +6,7 @@
 This project was presented at [the 2024 Life Cycle Innovation Conference](https://fslci.org/lcic/lcic2024/lcic2024-abstracts/integrating-aspen-plus-simulations-with-brightway-2-5-for-sustainable-process-design-a-case-study-on-hydrogen-production-from-mixed-plastic-waste/) (LCIC) in Berlin, Germany.
 
 ## 📝 About
-By integrating Aspen Plus process simulation with Brightway 2.5 life cycle assessment, this tool enables the quantification of environmental impacts during the early stages of process design.
+The tool integrates Aspen Plus process simulation results with Brightway 2.5 life cycle assessment framework, enabling the quantification of environmental impacts during the early stages of process design.
 
 ## 🚀 Key Features
 - Material and energy flows from Aspen Plus simulations are directly imported.
