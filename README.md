@@ -61,5 +61,5 @@ The example is related to the pyrolisis of waste tires to produce fuel oil, take
 ## 📞 Contact
 If you have any questions or need help, do not hesitate to contact me:
 
-[Nicolas Bertoldo](nicolas.bertoldo@polimi.it)
+[Nicolas Bertoldo](https://github.com/Nick-Bertoldo) - nicolas.bertoldo@polimi.it
 
