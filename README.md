@@ -1,11 +1,5 @@
 # Integrating Aspen Plus Simulations with Brightway 2.5 for Sustainable Process Design
 
-[![Read the Docs](https://img.shields.io/readthedocs/timex?label=documentation)](https://docs.brightway.dev/projects/bw-timex/en/latest/)
-[![PyPI - Version](https://img.shields.io/pypi/v/bw-timex?color=%2300549f)](https://pypi.org/project/bw-timex/)
-[![Conda Version](https://img.shields.io/conda/v/diepers/bw_timex?label=conda)](https://anaconda.org/diepers/bw_timex)
-![Conda - License](https://img.shields.io/conda/l/diepers/bw_timex)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/brightway-lca/bw_timex/HEAD?labpath=notebooks%2Fgetting_started.ipynb)
-
 ![image](https://github.com/user-attachments/assets/2d536f74-7efa-4597-974e-9781b63c8143)
 
 
