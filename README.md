@@ -1,15 +1,21 @@
-# Integrating Aspen Plus Simulations with Brightway 2.5 for Sustainable Process Design
+# AspenXbw: Integrating Aspen Plus Simulations with Brightway 2.5 for Sustainable Process Design
 
 ![image](https://github.com/user-attachments/assets/2d536f74-7efa-4597-974e-9781b63c8143)
 
 
 This project was presented at [the 2024 Life Cycle Innovation Conference](https://fslci.org/lcic/lcic2024/lcic2024-abstracts/integrating-aspen-plus-simulations-with-brightway-2-5-for-sustainable-process-design-a-case-study-on-hydrogen-production-from-mixed-plastic-waste/) (LCIC) in Berlin, Germany.
 
-## 📝 Description
-The process industry faces significant challenges in achieving sustainable development, often constrained by narrow profit margins and a conservative approach to innovation. The implementation of novel solutions to reduce environmental impact is not readily embraced in this industry. Additionally, the quantification of environmental impacts at the early stages of process design is hindered by a lack of primary data and comprehensive life cycle assessment (LCA) databases tailored to the specificities of the process industry. This research addresses this gap by introducing a novel framework that enables the quantification of environmental impacts during the initial design phase of a process.
-In this study, we present a novel approach that seamlessly integrates simulation results from Aspen Plus, a widely-used process simulator, with the open-source life cycle assessment framework, Brightway 2.5. The process simulation results obtained from Aspen, namely material and energy flows, are seamlessly linked to Brightway 2.5, allowing for direct computation of environmental impacts.
-The integration is facilitated through a user-friendly graphical user interface (GUI) developed using the Dash library from Plotly in Python. Such an interface serves as an intuitive bridge between Aspen Plus and Brightway 2.5, enabling researchers and practitioners to effortlessly navigate through simulation inputs, view results, and perform life cycle assessments.
-The presented framework stands as a scalable and adaptable solution, aiming to foster sustainable practices by integrating seamlessly into the existing workflow, providing a valuable tool for decision-makers in the pursuit of environmentally conscious process design.
+## 📝 About
+By integrating Aspen Plus process simulation with Brightway 2.5 life cycle assessment, this tool enables the quantification of environmental impacts during the early stages of process design.
+
+## 🚀 Key Features
+- Material and energy flows from Aspen Plus simulations are directly imported.
+- Linking process flows to ecoinvent activities.
+- Computing LCA results with the open-source framework brightway 2.5.
+- User-Friendly GUI built with Plotly's Dash library in Python for easy navigation and visualization.
+
+## 💡 Uses:
+Early-Stage Impact Assessment: Enables environmental impact quantification during initial design phases.
 
 ## 📋 Prerequisites
 Before you begin, ensure you have met the following requirements:
