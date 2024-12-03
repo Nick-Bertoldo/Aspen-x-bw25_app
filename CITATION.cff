@@ -1,0 +1,35 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Integrating Aspen Plus Simulations with Brightway 2.5 for
+  Sustainable Process Design
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Nicolas
+    family-names: Bertoldo
+    email: nicolas.bertoldo@polimi.it
+    affiliation: >-
+      Department of Chemistry, Materials and Chemical
+      Engineering “Giulio Natta”, Politecnico di Milano,
+      Piazza Leonardo da Vinci, 32, 20133 Milano, Italy;
+    orcid: 'https://orcid.org/0000-0001-5195-5534'
+  - given-names: Alessandro
+    family-names: Salvi
+    email: alessandro.salvi@polimi.it
+    affiliation: >-
+      Department of Chemistry, Materials and Chemical
+      Engineering “Giulio Natta”, Politecnico di Milano,
+      Piazza Leonardo da Vinci, 32, 20133 Milano, Italy
+    orcid: 'https://orcid.org/0000-0001-5062-4282'
+repository-code: 'https://github.com/Nick-Bertoldo/Aspen-x-bw25_app'
+keywords:
+  - Life Cycle Assessment
+  - Brightway LCA
+  - Aspen Plus
+  - Chemical Engineering
+date-released: '2024-12-03'
