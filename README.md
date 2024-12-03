@@ -46,7 +46,7 @@ bio_db = bd.Database("<biosphere database name>")
 EF_select = [met for met in bd.methods if met[0] == 'EF v3.1']
 ```
 
-## ✨ Known issues and potential improvements
+## ✨ Potential improvements
 
 
 
