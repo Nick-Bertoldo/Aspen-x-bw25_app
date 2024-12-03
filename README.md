@@ -17,7 +17,8 @@ Before you begin, ensure you have met the following requirements:
 - Aspen plus software;
 - ecoinvent licence;
 - brightway 2.5: To install bw you can follow the instructions present in this repository:  https://github.com/brightway-lca/brightway25
-- [A brightway project with ecoinvent](https://docs.brightway.dev/en/latest/content/cheatsheet/importing.html). 
+- [A brightway project with ecoinvent](https://docs.brightway.dev/en/latest/content/cheatsheet/importing.html).
+- [Plotly Dash](https://dash.plotly.com/)
 
 ## 🔧 Installation
 
