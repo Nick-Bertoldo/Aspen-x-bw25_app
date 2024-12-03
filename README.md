@@ -46,6 +46,9 @@ bio_db = bd.Database("<biosphere database name>")
 EF_select = [met for met in bd.methods if met[0] == 'EF v3.1']
 ```
 
+### Testing:
+To test the app you can use the Excel files "Materials PyroTires.xlsx" and "Utilities PyroTires.xlsx".
+The example is related to the pyrolisis of waste tires to produce fuel oil, taken from the preset templates of Aspen Plus. 
 
 
 ## ✨ Potential improvements
