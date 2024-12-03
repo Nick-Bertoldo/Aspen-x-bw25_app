@@ -11,7 +11,7 @@ The tool integrates Aspen Plus process simulation results with Brightway 2.5 lif
 ## 🚀 Key Features
 - Material and energy flows from Aspen Plus simulations are directly imported.
 - Linking process flows to ecoinvent activities.
-- Computing LCA results with the open-source framework brightway 2.5.
+- Computing LCA results with the open-source framework Brightway 2.5.
 - User-Friendly GUI built with Plotly's Dash library in Python for easy navigation and visualization.
 
 ## 💡 Uses:
@@ -22,7 +22,7 @@ Before you begin, ensure you have met the following requirements:
 
 - Aspen plus software;
 - ecoinvent licence;
-- brightway 2.5: To install bw you can follow the instructions present in this repository:  https://github.com/brightway-lca/brightway25
+- Brightway 2.5: To install bw you can follow the instructions present in this repository:  https://github.com/brightway-lca/brightway25
 - [A brightway project with ecoinvent](https://docs.brightway.dev/en/latest/content/cheatsheet/importing.html).
 - [Plotly Dash](https://dash.plotly.com/)
 
@@ -53,7 +53,8 @@ The example is related to the pyrolisis of waste tires to produce fuel oil, take
 
 ## ✨ Potential improvements
 - Adding a complete unit conversion from Aspen to bw.
-- Dealing with co-product.
+- Dealing with co-products.
+- Including a consequential approach.
 - Improve the integration with Aspen, including a python interface directly in the app. (e.g. [AspenPythonInterface](https://github.com/YouMayCallMeJesus/AspenPlus-Python-Interface))
 
 
