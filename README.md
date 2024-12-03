@@ -15,7 +15,7 @@ The tool integrates Aspen Plus process simulation results with Brightway 2.5 lif
 - User-Friendly GUI built with Plotly's Dash library in Python for easy navigation and visualization.
 
 ## 💡 Uses:
-Early-Stage Impact Assessment: Enables environmental impact quantification during initial design phases.
+Early-Stage Impact Assessment: Enables a preliminary environmental impact quantification during initial design phases.
 
 ## 📋 Prerequisites
 Before you begin, ensure you have met the following requirements:
