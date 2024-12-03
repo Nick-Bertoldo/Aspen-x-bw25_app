@@ -46,6 +46,6 @@ EF_select = [met for met in bd.methods if met[0] == 'EF v3.1']
 
 ## 📞 Contact
 If you have any questions or need help, do not hesitate to contact me:
-- [Nicolas Bertoldo](nicolas.bertoldo@polimi.it)
-- Project Link: https://github.com/Nick-Bertoldo/Aspen-x-bw25_app
+
+[Nicolas Bertoldo](nicolas.bertoldo@polimi.it)
 
