@@ -47,7 +47,9 @@ EF_select = [met for met in bd.methods if met[0] == 'EF v3.1']
 ```
 
 ## ✨ Potential improvements
-
+- Adding a complete unit conversion from Aspen to bw.
+- Dealing with co-product.
+- Improve the integration with Aspen, including a python interface directly in the app. (e.g. [AspenPythonInterface](https://github.com/YouMayCallMeJesus/AspenPlus-Python-Interface))
 
 
 ## 📞 Contact
