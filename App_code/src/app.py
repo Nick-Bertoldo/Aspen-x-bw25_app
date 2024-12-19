@@ -29,13 +29,6 @@ bio_db = bd.Database("<biosphere database name>")
 # impact assessment method used for the computation of LCA impacts
 EF_select = [met for met in bd.methods if met[0] == 'EF v3.1']
 
-def get_sheet_data(sheets, sheet_name):
-    if sheet_name in sheets:
-        return sheets[sheet_name].iloc[:, 2:]
-    else:
-        print(f'{sheet_name} sheet is missing!')
-        return pd.DataFrame()
-
 # list of conversion factors from Aspen to brightway
 conversion_factors = {
     'kg/hr': 1,  # Assuming kg/hr stays as kg/hr, no conversion needed
